@@ -1,0 +1,11 @@
+read -p 'Podaj imie: ' imie
+read -sp 'Podaj PESEL: ' PESEL
+
+echo
+echo
+echo "Witaj, twoje dane to: ${imie} , ${PESEL}"
+
+
+cat lista1 lista2 > lista.txt
+sort lista.txt
+cat lista.txt           
