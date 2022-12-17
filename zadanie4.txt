@@ -1,4 +1,4 @@
-  GNU nano 6.2                        shukaj.sh *                               
+                              
 read -p 'Ciong: ' ciong
 
 echo "Znalezione osoby:"
