@@ -13,19 +13,3 @@ cat lista.txt
 licznik=$(grep -ic lista.txt -e $ciong)
 echo "Znaleziono $licznik osob spelniajacych szukane kryteria"
 
-read -p 'Ciong: ' ciong
-
-echo "Usuwane osoby:"
-echo ""
-grep -ri lista.txt -e $ciong 
-licznik=$(grep -ic lista.txt -e $ciong)
-echo "Usuniento $licznik osob spelniajacych kryterium"
-
-sed '/$ciong/d' lista.txt
-
-echo ""
-echo "Pozostale osoby:"
-echo ""
-
-cat lista.txt
-
