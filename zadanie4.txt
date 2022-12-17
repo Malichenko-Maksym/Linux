@@ -1,0 +1,15 @@
+  GNU nano 6.2                        shukaj.sh *                               
+read -p 'Ciong: ' ciong
+
+echo "Znalezione osoby:"
+echo ""
+grep -ri lista.txt -e $ciong 
+
+echo ""
+echo "Cala lista:"
+echo ""
+
+cat lista.txt
+licznik=$(grep -ic lista.txt -e $ciong)
+echo "Znaleziono $licznik osob spelniajacych szukane kryteria"
+
