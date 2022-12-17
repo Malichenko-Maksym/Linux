@@ -1,0 +1,19 @@
+read -p 'Ciong: ' ciong
+
+echo "Usuwane osoby:"
+echo ""
+grep -ri lista.txt -e $ciong 
+licznik=$(grep -ic lista.txt -e $ciong)
+echo "Usuniento $licznik osob spelniajacych kryterium"
+
+grep -iv lista.txt -e $ciong > temp.txt
+cat temp.txt > lista.txt
+
+echo ""
+echo "Pozostale osoby:"
+echo ""
+
+cat lista.txt
+rm temp.txt
+
+
