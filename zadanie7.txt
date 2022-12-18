@@ -1,0 +1,23 @@
+index=0
+moves=( 1 2 3 4 5)
+while (($index<=5))
+do
+ 
+ moves[(1)]="0"
+ moves[(2)]="0"
+ moves[(3)]="0"
+ moves[(4)]="0"
+ moves[(5)]="0"
+ kl=$(($index + 1))
+ moves[($kl)]="X"
+ echo " ${moves[1]} "
+ echo " ${moves[2]} "
+echo " ${moves[3]} "
+echo " ${moves[4]} "
+echo " ${moves[5]} "
+ sleep 1
+ clear
+ index=$((index+1))
+done 
+
+
