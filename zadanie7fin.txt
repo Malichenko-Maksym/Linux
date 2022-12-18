@@ -1,0 +1,5 @@
+while true 
+do echo "$(date '+%D %T' | toilet -f term -F border --metal)" 
+sleep 1 
+done
+
