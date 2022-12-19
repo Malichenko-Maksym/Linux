@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if a file was passed as an argument
+if [ $# -eq 0 ]
+then
+    echo "Error: No file provided"
+    exit 1
+fi
+
+# Make sure the file exists
+if [ ! -f $1 ]
+then
+    echo "Error: File not found"
+    exit 1
+fi
+
+# Read the file and count the occurrences of each word
+cat $1 | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr
