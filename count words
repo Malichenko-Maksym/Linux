@@ -15,4 +15,7 @@ then
 fi
 
 # Read the file and count the occurrences of each word
-cat $1 | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr
+# First, remove all punctuation symbols from the file
+# Then, split the words by white space and count the occurrences
+# Finally, sort the output by the number of occurrences
+tr -d '[:punct:]' < $1 | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr
