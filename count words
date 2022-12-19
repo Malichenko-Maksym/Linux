@@ -16,6 +16,7 @@ fi
 
 # Read the file and count the occurrences of each word
 # First, remove all punctuation symbols from the file
+# Then, convert all words to lowercase
 # Then, split the words by white space and count the occurrences
 # Finally, sort the output by the number of occurrences
-tr -d '[:punct:]' < $1 | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr
+tr -d '[:punct:]' < $1 | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr
